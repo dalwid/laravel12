@@ -2,8 +2,8 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Requests\UserRequest;
 use App\Models\User;
-use Illuminate\Http\Request;
 use Exception;
 
 class UserController extends Controller
@@ -14,9 +14,9 @@ class UserController extends Controller
        return view('users.create');
     }
 
-    public function store(Request $request)
+    public function store(UserRequest $request)
     {
-        
+
         try{
 
             User::create([
@@ -24,11 +24,11 @@ class UserController extends Controller
                 'email'     => $request->email,
                 'password'  => $request->password
             ]);
-    
+
             return redirect()->route('user.create')->with('success', 'Usuário cadastrado com sucesso.');
         }catch(Exception $e){
             return back()->withInput()->with('error', 'Usuário não cadastrado.');
         }
-        
+
     }
 }

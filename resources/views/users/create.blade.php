@@ -15,19 +15,19 @@
             <div class="mb-4">
                 <label for="name" class="form-label">Nome: </label>
                 <input type="text" name="name" id="name" class="form-input" placeholder="Nome completo"
-                    value="{{ old('name') }}" required><br><br>
+                    value="{{ old('name') }}">
             </div>
 
             <div class="mb-4">
                 <label for="email" class="form-label">E-mail: </label>
                 <input type="email" name="email" id="email" class="form-input"
-                    placeholder="Melhor e-mail do usuário" value="{{ old('email') }}" required><br><br>
+                    placeholder="Melhor e-mail do usuário" value="{{ old('email') }}">
             </div>
 
             <div class="mb-4">
                 <label for="password" class="form-label">Senha: </label>
                 <input type="password" name="password" id="password" class="form-input"
-                    placeholder="Senha com no mínimo 6 carcteres" value="{{ old('password') }}" required><br><br>
+                    placeholder="Senha com no mínimo 6 carcteres" value="{{ old('password') }}">
             </div>
 
             <button type="submit" class="btn-success">Cadastrar</button>
